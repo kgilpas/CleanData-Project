@@ -52,7 +52,7 @@ Creating the second table, with average of each variable for each activity and e
 
 melt (creating a table with 813621 rows, each containing subject number, activity name - as we want to summarize data according to these columns - and variable name and its value)
 dcast (creating data frame output with 180 rows - because of 30 subjects, each with 6 possible activity states, and 81 columns - 79 variables, subject number and activity name)
-It is important to set the aggregation function as mean (in function dcast, argument fun.aggregate), as the default value is sum, which is not the desired summary function for this exercise.
+It is important to set the aggregation function as mean (in function dcast, argument fun.aggregate), as the default value is sum, which is not the desired summary function.
 
 The tidy dataset is written to a separate .txt file using the following function:
 
