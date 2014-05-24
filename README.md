@@ -1,16 +1,16 @@
 CleanData-Project
 =================
 
-Getting and Cleaning Data - Course Projects
+**Getting and Cleaning Data - Course Projects**
 
 The purpose of the project was to produce a tidy data set from the files provided. The commands which were used to produce the tidy set and comments, are stored in "run_analysis.R" file.
 
-Steps 
+**Steps** 
 
 First, merge the training and the test sets to create one data set, extract only the measurements on the mean and standard deviation for each measurement, use descriptive activity names to name the activities in the data set and label the data set with descriptive activity names. Lastly, create a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 
-Step 1
+**Step 1**
 
 Downloading and unzipping appropriate files was performed from the level of R, using functions:
 
@@ -29,7 +29,7 @@ For the author, this step also involved naming columns with the names of feature
 as.character (which changed the type of label from factor to string)
 colnames (to add the desired attribute to data frame)
 
-Step 2
+**Step 2**
 
 Choosing only the variables which were means or standard deviations of some characteristics was performed with the following functions:
 
@@ -39,13 +39,14 @@ Columns labeled with meanFreq(), as the file 'features_info.txt' indicated that 
 
 The resulting data set consists of 81 columns (79 variables plus columns indicating activity and subject).
 
-Step 3 and step 4
+**Step 3 and step 4**
 
 Labeling the activities not with numbers, but descriptive names, consisted of two steps. First part was to read the file containing activity names, the second part - to convert variable "activity" to the factor and name the levels of activity with those names. This was achieved with functions:
 
 file.path and read.table (as described above, in step 1)
 factor(data, labels) (where data is the desired "activity" column and labels are names read from the file "activity_labels.txt")
-Step 5
+
+**Step 5**
 
 Creating the second table, with average of each variable for each activity and each subject, was performed with:
 
