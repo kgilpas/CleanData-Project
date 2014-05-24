@@ -45,7 +45,7 @@ activityFilename <- file.path('UCI HAR Dataset', 'activity_labels.txt')
 actlabels <- read.table(activityFilename, sep = " ")
 extractedframe$activity <- factor(extractedframe$activity, labels = actlabels[,2])
 
-# melt the frame according to subject and activity in order to obtain atomic data
+# melt the frame according to subject and activity 
 library(reshape2)
 molten <- melt(extractedframe, id = c("subject", "activity"))
 #aggregate the data according to subject and activity, computing their means
